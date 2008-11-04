@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Tiproid</string>
+	<string name="about_txt">© 2008 Erik C. Thauvin\nAll Rights Reserved\n\nerik@thauvin.net\n\nhttp://mobile.thauvin.net</string>
+	<string name="about_menu_txt">About</string>
+	<string name="alert_dialog_ok">OK</string>
+	<string name="alert_dialog_cancel">Cancel</string>
+	<string name="main_bill_lbl_txt">Bill Total Amount:</string>
+	<string name="main_calc_btn_txt">Calculate</string>
+	<string name="main_reset_btn_txt">Reset</string>
+	<string name="main_tax_lbl_txt">Tax Amount:</string>
+	<string name="main_tax_hint_land_txt">Use the keyboard...</string>
+	<string name="main_tax_hint_txt">Tap button to edit...</string>
+	<string name="main_tip_lbl_txt">Tip %:</string>
+	<string name="main_split_lbl_txt">Split:</string>
+	<string name="result_tip_lbl_txt">Tip ?%:</string>
+	<string name="result_split_lbl_txt">Split x ?:</string>
+	<string name="result_total_lbl_txt">Total:</string>	
+	<string name="error_bill_txt">Please enter the bill amount...</string>
+	<string name="sample_txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+</resources>

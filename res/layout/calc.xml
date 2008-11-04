@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<EditText android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:layout_marginLeft="20dip"
+		android:scrollHorizontally="true" android:autoText="false"
+		android:capitalize="none" android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_marginRight="20dip" android:numeric="decimal"
+		android:gravity="right" android:id="@+id/calc_edit_fld" />
+	<TableLayout android:id="@+id/TableLayout01"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<TableRow android:id="@+id/TableRow01" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip">
+			<Button android:id="@+id/Button01" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="1"></Button>
+			<Button android:id="@+id/Button02" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="2"></Button>
+			<Button android:id="@+id/Button03" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="3"></Button>
+		</TableRow>
+		<TableRow android:id="@+id/TableRow02" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginRight="20dip"
+			android:layout_marginLeft="20dip">
+			<Button android:id="@+id/Button04" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="4"></Button>
+			<Button android:id="@+id/Button05" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="5"></Button>
+			<Button android:id="@+id/Button06" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="6"></Button>
+		</TableRow>
+		<TableRow android:id="@+id/TableRow03" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="20dip">
+			<Button android:id="@+id/Button07" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="7"></Button>
+			<Button android:id="@+id/Button08" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="8"></Button>
+			<Button android:id="@+id/Button09" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="9"></Button>
+		</TableRow>
+		<TableRow android:id="@+id/TableRow04" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="20dip">
+			<Button android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/ButtonDot"
+				android:text="."></Button>
+			<Button android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/Button0"
+				android:text="0"></Button>
+			<ImageButton android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/ButtonBS"
+				android:src="@drawable/delete"></ImageButton>
+		</TableRow>
+	</TableLayout>
+</LinearLayout>
