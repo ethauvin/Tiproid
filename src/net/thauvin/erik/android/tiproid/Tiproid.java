@@ -249,66 +249,76 @@ public class Tiproid extends Activity
 				taxTotal = parseInt(taxTxt);
 			}
 
-			final int subTotal = parseInt(billTxt) - taxTotal;
-			final int tipRate = Integer.parseInt(tipTxt);
-			final int splitCount = Integer.parseInt(splitTxt);
-			int tipTotal = (subTotal * tipRate) / 100;
-			int billTotal = subTotal + tipTotal + taxTotal;
+			final int billTotal = parseInt(billTxt);
 
-			if ((billTotal % 100) < 50)
+			if (taxTotal == billTotal)
 			{
-				while ((billTotal % 100) != 0)
-				{
-					tipTotal--;
-					billTotal = subTotal + tipTotal + taxTotal;
-				}
+				Toast.makeText(Tiproid.this, R.string.error_identical_txt, Toast.LENGTH_SHORT).show();
 			}
 			else
 			{
-				while ((billTotal % 100) != 0)
+
+				final int subTotal = billTotal - taxTotal;
+				final int tipRate = Integer.parseInt(tipTxt);
+				final int splitCount = Integer.parseInt(splitTxt);
+				int tipSum = (subTotal * tipRate) / 100;
+				int billSum = subTotal + tipSum + taxTotal;
+
+				if ((billSum % 100) < 50)
 				{
-					tipTotal++;
-					billTotal = subTotal + tipTotal + taxTotal;
-				}
-			}
-
-			final LayoutInflater factory = LayoutInflater.from(this);
-			final View resultView = factory.inflate(R.layout.result, null);
-
-			final TextView tipFld = (TextView) resultView.findViewById(R.id.result_tip_fld);
-			final TextView totalFld = (TextView) resultView.findViewById(R.id.result_total_fld);
-			final TextView tipLbl = (TextView) resultView.findViewById(R.id.result_tip_lbl);
-			final TextView splitFld = (TextView) resultView.findViewById(R.id.result_split_fld);
-			final TextView splitLbl = (TextView) resultView.findViewById(R.id.result_split_lbl);
-
-			tipLbl.setText(tipLbl.getText().toString().replace("?", tipTxt));
-			tipFld.setText(parseStr(tipTotal));
-			totalFld.setText(parseStr(billTotal));
-
-			if (splitCount == 1)
-			{
-				splitFld.setText("");
-				splitLbl.setText("");
-			}
-			else
-			{
-				splitLbl.setText(splitLbl.getText().toString().replace("?", splitTxt));
-				int split = billTotal / splitCount;
-				if ((split * splitCount) < billTotal)
-				{
-					split += 1;
-				}
-				splitFld.setText(parseStr(split));
-			}
-
-			new AlertDialog.Builder(this).setView(resultView).setPositiveButton(R.string.alert_dialog_ok,
-					new DialogInterface.OnClickListener()
+					while ((billSum % 100) != 0)
 					{
-						public void onClick(DialogInterface dialog, int whichButton)
+						tipSum--;
+						billSum = subTotal + tipSum + taxTotal;
+					}
+				}
+				else
+				{
+					while ((billSum % 100) != 0)
+					{
+						tipSum++;
+						billSum = subTotal + tipSum + taxTotal;
+					}
+				}
+
+				final LayoutInflater factory = LayoutInflater.from(this);
+				final View resultView = factory.inflate(R.layout.result, null);
+
+				final TextView tipFld = (TextView) resultView.findViewById(R.id.result_tip_fld);
+				final TextView totalFld = (TextView) resultView.findViewById(R.id.result_total_fld);
+				final TextView tipLbl = (TextView) resultView.findViewById(R.id.result_tip_lbl);
+				final TextView splitFld = (TextView) resultView.findViewById(R.id.result_split_fld);
+				final TextView splitLbl = (TextView) resultView.findViewById(R.id.result_split_lbl);
+
+				tipLbl.setText(tipLbl.getText().toString().replace("?", tipTxt));
+				tipFld.setText(parseStr(tipSum));
+				totalFld.setText(parseStr(billSum));
+
+				if (splitCount == 1)
+				{
+					splitFld.setText("");
+					splitLbl.setText("");
+				}
+				else
+				{
+					splitLbl.setText(splitLbl.getText().toString().replace("?", splitTxt));
+					int split = billSum / splitCount;
+					if ((split * splitCount) < billSum)
+					{
+						split += 1;
+					}
+					splitFld.setText(parseStr(split));
+				}
+
+				new AlertDialog.Builder(this).setView(resultView).setPositiveButton(R.string.alert_dialog_ok,
+						new DialogInterface.OnClickListener()
 						{
-							// do nothing
-						}
-					}).show();
+							public void onClick(DialogInterface dialog, int whichButton)
+							{
+								// do nothing
+							}
+						}).show();
+			}
 		}
 	}
 
@@ -358,7 +368,6 @@ public class Tiproid extends Activity
 		else
 		{
 			taxFld.setHint(getString(R.string.main_tax_hint_txt));
-
 		}
 
 		final ArrayAdapter<CharSequence> tipAdapter = ArrayAdapter.createFromResource(this, R.array.main_tip_array,

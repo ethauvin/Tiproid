@@ -70,6 +70,7 @@ public final class R {
         public static final int alert_dialog_ok=0x7f050003;
         public static final int app_name=0x7f050000;
         public static final int error_bill_txt=0x7f050010;
+        public static final int error_identical_txt=0x7f050011;
         public static final int main_bill_lbl_txt=0x7f050005;
         public static final int main_calc_btn_txt=0x7f050006;
         public static final int main_reset_btn_txt=0x7f050007;
@@ -81,6 +82,6 @@ public final class R {
         public static final int result_split_lbl_txt=0x7f05000e;
         public static final int result_tip_lbl_txt=0x7f05000d;
         public static final int result_total_lbl_txt=0x7f05000f;
-        public static final int sample_txt=0x7f050011;
+        public static final int sample_txt=0x7f050012;
     }
 }
