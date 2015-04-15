@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dip"
+        android:text="@string/main_tax_lbl_txt"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/main_tax_lbl"
+        android:layout_marginLeft="20dip"
+        android:textSize="15px" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_marginRight="20dip"
+        android:layout_marginLeft="20dip">
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:id="@+id/main_tax_fld"
+            android:layout_width="wrap_content"
+            android:minWidth="200dip"
+            android:numeric="decimal" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calc"
+            android:id="@+id/main_tax_edit_btn"
+            android:minWidth="81dip"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dip"
+        android:text="@string/main_bill_lbl_txt"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/main_bill_lbl"
+        android:layout_marginLeft="20dip"
+        android:textSize="15px" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_marginRight="20dip"
+        android:layout_marginLeft="20dip">
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:id="@+id/main_bill_fld"
+            android:layout_width="wrap_content"
+            android:minWidth="200dip"
+            android:numeric="decimal" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calc"
+            android:id="@+id/main_bill_edit_btn"
+            android:minWidth="81dip"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/main_tip_lbl"
+                android:text="@string/main_tip_lbl_txt"
+                android:minWidth="200dip"
+                android:textSize="15px" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/main_split_lbl"
+                android:text="@string/main_split_lbl_txt"
+                android:textSize="15px" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow02"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <Spinner
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_tip_spin"
+                    android:layout_width="fill_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <Spinner
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_split_spin"
+                    android:layout_width="wrap_content"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow03"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_calc_btn_txt"
+                android:id="@+id/main_calculate_btn"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_reset_btn_txt"
+                android:id="@+id/main_reset_btn"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
